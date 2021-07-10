@@ -1,0 +1,104 @@
+<!Doctype html>
+<html>
+<title> Home</title>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <script>
+    function myFunction(temp) {
+    var x = document.getElementById(temp);
+      if (x.style.display === "block") {
+      x.style.display = "none";
+      } else {
+      x.style.display = "block";
+      }
+    }
+
+  </script>
+
+
+</head>
+<body>
+
+
+<center>
+
+<h1>{{q1}}</h1>
+<p>Below is the classification:</p>
+<br>
+<br>
+<br>
+<div>
+
+
+  <button onclick="myFunction('myDIV1')" class="btn btn-secondary btn-lg btn-block" >Tutorials</button>
+  <div id="myDIV1" class="list-group">
+    {% for i1 in tutorials %}
+    <a href="{{i1}}" class="list-group-item list-group-item-action">{{i1}}</a><br>
+    {% endfor %}
+  </div>
+  <br>
+<br>
+  <button onclick="myFunction('myDIV2')"  class="btn btn-secondary btn-lg btn-block">Reviews</button>
+  <div id="myDIV2" class="list-group">
+    {% for i2 in reviews %}
+    <a href="{{i2}}" class="list-group-item list-group-item-action">{{i2}}</a><br>
+    {% endfor %}
+  </div>
+<br>
+<br>
+  <button onclick="myFunction('myDIV3')"  class="btn btn-secondary btn-lg btn-block" >Information</button>
+  <div id="myDIV3" class="list-group">
+    {% for i3 in information %}
+    <a href="{{i3}}" class="list-group-item list-group-item-action">{{i3}}</a><br>
+    {% endfor %}
+  </div>
+<br>
+<br>
+  <button onclick="myFunction('myDIV4')"  class="btn btn-secondary btn-lg btn-block">Social Media</button>
+  <div id="myDIV4" class="list-group">
+    {% for i4 in socialmedia %}
+    <a href="{{i4}}" class="list-group-item list-group-item-action">{{i4}}</a><br>
+    {% endfor %}
+  </div>
+<br>
+<br>
+  <button onclick="myFunction('myDIV5')"  class="btn btn-secondary btn-lg btn-block" >Shopping</button>
+  <div id="myDIV5" class="list-group">
+    {% for i5 in shopping %}
+    <a href="{{i5}}" class="list-group-item list-group-item-action">{{i5}}</a><br>
+    {% endfor %}
+  </div>
+<br>
+<br>
+  <button onclick="myFunction('myDIV6')"  class="btn btn-secondary btn-lg btn-block" >News</button>
+  <div id="myDIV6" class="list-group">
+    {% for i6 in news %}
+    <a href="{{i6}}" class="list-group-item list-group-item-action">{{i6}}</a><br>
+    {% endfor %}
+  </div>
+<br>
+<br>
+  <button onclick="myFunction('myDIV7')" class="btn btn-secondary btn-lg btn-block" >Other</button>
+  <div id="myDIV7" class="list-group">
+    {% for i7 in other %}
+    <a href="{{i7}}" class="list-group-item list-group-item-action">{{i7}}</a><br>
+    {% endfor %}
+  </div><br><br>
+
+  <form action="http://127.0.0.1:8000/piechart">
+    <button type="submit" class="btn btn-primary btn-lg btn-block" >Visualize</button>
+  </form><br>
+<br><br>
+  <form action="http://127.0.0.1:8000">
+  <button type="submit" class="btn btn-primary btn-lg btn-block" >Search Again</button>
+</form><br>
+
+<br>
+<br>
+</div>
+</center>
+
+</body>
+</html>

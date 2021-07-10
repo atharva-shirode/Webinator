@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    
+    {% if title %}
+    <title>{{title}}</title>
+    {% else %}
+    <title>Categorisation</title>
+    {% endif %}
+</head>
+<body>   
+<script>
+function myFunction() {
+  window.history.back();
+  
+}
+</script>
+
+
+
+   
+    {% block content %} {% endblock %}   
+    <button onclick="myFunction()">Home</button> 
+</body>
+</html>

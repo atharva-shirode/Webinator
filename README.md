@@ -3,4 +3,4 @@ A web search result classifier which classifies and analyzes the resulting URLs 
 
 aptwebinator containts the web-app files under the django project Webinator
 
-Tech Stack: HTML, CSS, Bootstrap, Python, Django, NLTK
+Tech Stack: HTML, CSS, Bootstrap, Python, Django, NLTK ,google search library(pip install google)
